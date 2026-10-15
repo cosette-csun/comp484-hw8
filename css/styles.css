@@ -1,0 +1,209 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Color Palette
+#2F3A55 - Blueberry Skin
+#5C6B8A - Berry Bloom
+#6E6F73 - Stem Grey
+#E7E2DE - Yogurt Tint
+#F5F6F3 - Plate White
+*/
+
+/* Global styles
+------------------------------------*/
+body {
+    background: #F5F6F3;
+    color: #2F3A55;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+.navigation {
+    background: #2F3A55;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation a {
+    color: #F5F6F3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.navigation a:hover {
+    color: #E7E2DE;
+    text-decoration: underline;
+}
+
+/* Prevent sticky menu from covering sections */
+#about,
+#work,
+#education,
+#contact {
+    scroll-margin-top: 90px;
+}
+
+/* Header & Footer
+------------------------------------*/
+header {
+    background: #2F3A55;
+    color: #F5F6F3;
+    padding: 40px;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    margin-right: 30px;
+}
+
+header h1,
+header h2 {
+    margin: 0;
+}
+
+footer {
+    background: #2F3A55;
+    color: #F5F6F3;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+footer a {
+    color: #F5F6F3;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.contact-info a:hover {
+    color: #E7E2DE;
+}
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background: #E7E2DE;
+    color: #2F3A55;
+    padding: 40px;
+}
+
+
+/* Education
+------------------------------------*/
+.education {
+    background: #5C6B8A;
+    color: #F5F6F3;
+    padding: 40px;
+
+    background:
+            linear-gradient(
+                rgba(47, 58, 85, 0.88),
+                rgba(92, 107, 138, 0.80)
+            ),
+            url("../images/education-bg.jpg")
+            center / cover no-repeat #5C6B8A;
+}
+
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 12px;
+    }
+
+    .navigation a {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+
+    .column-narrow,
+    .column-wide {
+        width: 100%;
+        float: none;
+        min-height: auto;
+    }
+
+    .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 25px;
+        max-width: 100%;
+    }
+
+    header,
+    .work-experience,
+    .education,
+    footer {
+        padding: 15px;
+    }
+
+    .content-wrap {
+        padding: 25px;
+    }
+}
